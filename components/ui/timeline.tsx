@@ -20,13 +20,13 @@ const Timeline = ({ events }: { events: Event[] }) => {
           <div className="absolute left-0 top-1 w-5 h-5 bg-gray-900 rounded-full border-4 border-white"></div>
           {/* Content */}
           <div>
-            <h3 className="text-xl font-bold mb-1 inline">
+            <h3 className="text-l font-bold mb-1 inline">
               {event.heading}
               <span style={{ whiteSpace: "nowrap" }}>{" {"}</span>{" "}
               {/* Prevent wrapping */}
             </h3>
-            <div className="ml-8">{event.body}</div>
-            <h3 className="text-xl font-bold mb-1">{"}"}</h3>
+            <div className="ml-8 text-sm">{event.body}</div>
+            <h3 className="text-l font-bold mb-1">{"}"}</h3>
           </div>{" "}
         </div>
       ))}
