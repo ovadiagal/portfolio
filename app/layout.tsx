@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/ui/nav";
 import { JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/ui/footer";
+import Head from "next/head";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -27,6 +28,18 @@ export default function RootLayout({
       lang="en"
       className="dark" // Always apply dark class
     >
+      <Head>
+        <title>Gal Ovadia's Portfolio</title>
+        <meta property="og:title" content="Gal Ovadia's Portfolio" />
+        <meta
+          property="og:description"
+          content="Welcome to my portfolio. I am a Computer Science student at Georgia Tech."
+        />
+        <meta property="og:image" content="https://example.com/image.jpg" />
+        <meta property="og:url" content="https://example.com" />
+        <meta property="og:type" content="website" />
+      </Head>
+
       <body className="antialiased max-w-xl mx-auto px-5 mt-8">
         <main
           className={cx(
