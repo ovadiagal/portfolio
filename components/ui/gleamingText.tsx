@@ -7,8 +7,8 @@ interface GleamingTextProps {
 const GleamingText: React.FC<GleamingTextProps> = ({ children }) => {
     const gradientStyle = {
         backgroundImage:
-            "linear-gradient(140deg, transparent 0%, transparent 47%, red, orange, yellow, green, blue, indigo, violet, transparent 53%, transparent 100%)",
-        backgroundSize: "300% auto",
+            "linear-gradient(140deg, transparent 0%, transparent 35%, red, orange, yellow, green, blue, indigo, violet, transparent 65%, transparent 100%)",
+        backgroundSize: "500% auto",
     };
 
     return (
