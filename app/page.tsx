@@ -52,8 +52,8 @@ export default function Page() {
         accessible.
       </p>
       <p className="mb-4">
-        In my free time, I spread joy - and build the website - for the Ramblin'
-        Reck Club.
+        In my free time, I spread joy with - and build the website for - the
+        Ramblin' Reck Club.
       </p>
     </section>
   );
