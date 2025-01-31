@@ -27,7 +27,7 @@ export default function RootLayout({
       lang="en"
       className="dark" // Always apply dark class
     >
-      <body className="antialiased max-w-xl mx-auto px-8 mt-8">
+      <body className="antialiased max-w-xl mx-auto px-4 mt-8">
         <main
           className={cx(
             "w-full flex-auto min-w-0 mt-6 flex flex-col px-2",
