@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const navItems = {
   "/": { name: "About" },
   "/experience": { name: "Experience" },
+  "/skills": { name: "Skills" },
   "/contact": { name: "Contact" },
 };
 
@@ -26,7 +27,7 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1 hover:underline`}
+                  className={`transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1 hover:underline clickable`}
                 >
                   {isActive ? <u>{name}</u> : name}
                 </Link>

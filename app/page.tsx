@@ -1,41 +1,9 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import BinaryMessage from "@/components/ui/binaryMessage";
-import Timeline from "@/components/ui/timeline";
-import Link from "next/link";
-
-const greetings = [
-  "Hello", // English
-  "Olá", // Portuguese
-  "Bonjour", // French
-  "Ciao", // Italian
-  "Hej", // Swedish
-  "שלום", // Hebrew
-  "Hola", // Spanish
-  "привіт", // Ukrainian
-  "안녕하세요", // Korean
-  "你好", // Chinese
-  "Merhaba", // Turkish
-];
 
 export default function Page() {
-  const [greeting, setGreeting] = useState(greetings[0]);
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % greetings.length);
-      setGreeting(greetings[index]);
-    }, 750); // Change greeting every 1.5 seconds
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [index]);
-
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">About</h1>{" "}
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">About Me</h1>{" "}
       <div className="mb-8">
         <BinaryMessage />
       </div>

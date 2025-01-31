@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Contact me
+        Contact Me
       </h1>
       <p className="mb-4">Shoot me an email!</p>
       <p className="mb-8 text-center">gal dot ovadia at gatech dot edu</p>
@@ -15,7 +15,7 @@ export default function Page() {
       <ul className="font-sm flex flex-row space-x-4 gap-8 text-neutral-600 justify-center dark:text-neutral-300">
         <li>
           <Link
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className={`flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-1 px-2 m-1 hover:underline clickable`}
             rel="noopener noreferrer"
             target="_blank"
             href="https://www.linkedin.com/in/galovadia/"
@@ -28,7 +28,7 @@ export default function Page() {
         </li>
         <li>
           <Link
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className={`flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-1 px-2 m-1 hover:underline clickable`}
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/ovadiagal"
