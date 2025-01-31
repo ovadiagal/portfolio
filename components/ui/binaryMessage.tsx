@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 interface BinaryMessageProps {
-    flickerProbability?: number;
+  flickerProbability?: number;
 }
 
 // const PATTERN = [
@@ -18,75 +18,73 @@ interface BinaryMessageProps {
 // ];
 
 const PATTERN = [
-    "11  11 111111 11     11     111111",
-    "11  11 111111 11     11     111111",
-    "11  11 11     11     11     11  11",
-    "111111 111111 11     11     11  11",
-    "111111 111111 11     11     11  11",
-    "11  11 11     11     11     11  11",
-    "11  11 111111 111111 111111 111111",
-    "11  11 111111 111111 111111 111111",
+  "11  11 111111 11     11     111111",
+  "11  11 111111 11     11     111111",
+  "11  11 11     11     11     11  11",
+  "111111 111111 11     11     11  11",
+  "111111 111111 11     11     11  11",
+  "11  11 11     11     11     11  11",
+  "11  11 111111 111111 111111 111111",
+  "11  11 111111 111111 111111 111111",
 ];
 
 export default function BinaryMessage({
-    flickerProbability = 0.12,
+  flickerProbability = 0.2,
 }: BinaryMessageProps) {
-    const [grid, setGrid] = useState<(number | null)[][]>([]);
+  const [grid, setGrid] = useState<(number | null)[][]>([]);
 
-    useEffect(() => {
-        const initializeGrid = () =>
-            PATTERN.map((row) =>
-                row
-                    .split("")
-                    .map((char) =>
-                        char === " " ? null : Math.random() < 0.5 ? 1 : 0
-                    )
-            );
+  useEffect(() => {
+    const initializeGrid = () =>
+      PATTERN.map((row) =>
+        row
+          .split("")
+          .map((char) => (char === " " ? null : Math.random() < 0.5 ? 1 : 0))
+      );
 
-        setGrid(initializeGrid());
+    setGrid(initializeGrid());
 
-        const intervalId = setInterval(() => {
-            setGrid((prevGrid) =>
-                prevGrid.map((row) =>
-                    row.map((cell) =>
-                        cell !== null && Math.random() < flickerProbability
-                            ? 1 - cell
-                            : cell
-                    )
-                )
-            );
-        }, 1000);
+    const intervalId = setInterval(() => {
+      setGrid((prevGrid) =>
+        prevGrid.map((row) =>
+          row.map((cell) =>
+            cell !== null && Math.random() < flickerProbability
+              ? 1 - cell
+              : cell
+          )
+        )
+      );
+    }, 1000);
 
-        return () => clearInterval(intervalId);
-    }, [flickerProbability]);
+    return () => clearInterval(intervalId);
+  }, [flickerProbability]);
 
-    return (
-        <div
-            className="grid gap-1"
+  return (
+    <div
+      className="grid gap-1"
+      style={{
+        gridTemplateColumns: `repeat(${PATTERN[0].length}, minmax(0, 1fr))`,
+      }}
+      role="img"
+    >
+      {grid.map((row, i) =>
+        row.map((cell, j) => (
+          <div
+            key={`${i}-${j}`}
+            className={`w-1 h-3 flex items-center justify-center text-m font-mono transition-all duration-200 ease-in-out tracking-tighter ${
+              cell === 1
+                ? "text-green-300 animate-flicker"
+                : cell === 0
+                  ? "text-green-700"
+                  : "text-transparent"
+            }`}
             style={{
-                gridTemplateColumns: `repeat(${PATTERN[0].length}, minmax(0, 1fr))`,
+              textShadow: cell === 1 ? "0 0 10px #6ee7b7" : "",
             }}
-            role="img"
-        >
-            {grid.map((row, i) =>
-                row.map((cell, j) => (
-                    <div
-                        key={`${i}-${j}`}
-                        className={`w-1 h-3 flex items-center justify-center text-m font-mono transition-all duration-200 ease-in-out tracking-tighter ${
-                            cell === 1
-                                ? "text-green-400 animate-flicker"
-                                : cell === 0
-                                  ? "text-green-900"
-                                  : "text-transparent"
-                        }`}
-                        style={{
-                            textShadow: cell === 1 ? "0 0 15px #4ade80" : "",
-                        }}
-                    >
-                        {cell !== null ? cell : ""}
-                    </div>
-                ))
-            )}
-        </div>
-    );
+          >
+            {cell !== null ? cell : ""}
+          </div>
+        ))
+      )}
+    </div>
+  );
 }
