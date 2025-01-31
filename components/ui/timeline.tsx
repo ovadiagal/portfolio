@@ -25,7 +25,7 @@ const Timeline = ({ events }: { events: Event[] }) => {
               <span style={{ whiteSpace: "nowrap" }}>{" {"}</span>{" "}
               {/* Prevent wrapping */}
             </h3>
-            <div className="ml-8 text-sm">{event.body}</div>
+            <div className="ml-4 text-sm">{event.body}</div>
             <h3 className="text-l font-bold mb-1">{"}"}</h3>
           </div>{" "}
         </div>
