@@ -22,7 +22,7 @@ export default function Page() {
                         <div className="mb-1.5">
                             <LinkedIn />
                         </div>
-                        <p className="ml-2 h-7">linkedin</p>
+                        <p className="ml-2 h-7">Linkedin</p>
                     </Link>
                 </li>
                 <li>
@@ -33,9 +33,9 @@ export default function Page() {
                         href="https://github.com/ovadiagal"
                     >
                         <div className="mb-1">
-                            <Github />
+                            <GitHub />
                         </div>
-                        <p className="ml-2 h-7">github</p>
+                        <p className="ml-2 h-7">GitHub</p>
                     </Link>
                 </li>
             </ul>
@@ -45,7 +45,7 @@ export default function Page() {
         </section>
     );
 }
-const Github: React.FC = () => (
+const GitHub: React.FC = () => (
     <svg
         width="16"
         height="16"
