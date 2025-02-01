@@ -14,7 +14,7 @@ export default function Page() {
             <ul className="font-sm flex flex-row space-x-4 gap-8 text-neutral-600 justify-center dark:text-neutral-300">
                 <li>
                     <Link
-                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-1 px-2 m-1 hover:underline clickable"
+                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200  hover:underline clickable"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.linkedin.com/in/galovadia/"
@@ -27,7 +27,7 @@ export default function Page() {
                 </li>
                 <li>
                     <Link
-                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-1 px-2 m-1 hover:underline clickable"
+                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200  hover:underline clickable"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://github.com/ovadiagal"
