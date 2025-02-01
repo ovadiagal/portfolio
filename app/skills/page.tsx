@@ -18,10 +18,10 @@ const skills = [
 export default function Page() {
     return (
         <section>
+            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+                Technical Skills
+            </h1>
             <GleamingText>
-                <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-                    Technical Skills
-                </h1>
                 <ul className="flex flex-wrap justify-around">
                     {skills.map((skill) => (
                         <li
