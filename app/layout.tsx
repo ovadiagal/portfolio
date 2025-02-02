@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Navbar } from "@/components/ui/nav";
 import { JetBrains_Mono } from "next/font/google";
-import Footer from "@/components/ui/footer";
 import Head from "next/head";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -47,7 +46,7 @@ export default function RootLayout({
                 >
                     <Navbar />
                     {children}
-     g               <SpeedInsights />
+                    g <SpeedInsights />
                     <Analytics />
                 </main>
             </body>
