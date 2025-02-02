@@ -66,3 +66,27 @@
     @apply bg-background text-foreground; /* Ensure body uses the background and text colors */
   }
 }
+
+.custom-cursor {
+  cursor: url("/cursor-default.svg"), auto;
+}
+
+a,
+button {
+  cursor:
+    url("/cursor-pointer.svg") 10 10,
+    pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  cursor:
+    url("/cursor-text.svg") 10 10,
+    text;
+}

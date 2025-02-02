@@ -350,6 +350,7 @@ export default function BinaryMessage({
                         }`}
                         style={{
                             textShadow: cell === 1 ? "0 0 10px #6ee7b7" : "",
+                            userSelect: "none",
                         }}
                     >
                         {cell !== null ? cell : ""}

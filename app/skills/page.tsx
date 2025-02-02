@@ -8,9 +8,9 @@ const skills = [
     "GraphQL",
     "PostgreSQL",
     "C/C++",
-    "Docker",
     "PHP",
     "P4",
+    "Docker",
     "Linux",
     "Distributed Systems",
 ];
@@ -26,9 +26,9 @@ export default function Page() {
                     {skills.map((skill) => (
                         <li
                             key={skill}
-                            className="flex items-center space-x-2 mb-4 w-[30%]" // Adjust width to fit 3 per row
+                            className="flex items-start space-x-2 mb-4 w-[30%]" // Adjust width to fit 3 per row
                         >
-                            <span>{skill}</span>
+                            <p>{skill}</p>
                         </li>
                     ))}
                 </ul>

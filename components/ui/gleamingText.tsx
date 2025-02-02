@@ -12,17 +12,17 @@ const GleamingText: React.FC<GleamingTextProps> = ({ children }) => {
     };
 
     return (
-        <span className="relative inline-block">
-            <span className="relative z-10 text-white">{children}</span>
-            <span className="absolute inset-0 flex items-center justify-center z-20">
-                <span
+        <div className="relative inline-block">
+            <div className="relative z-10 text-white">{children}</div>
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div
                     style={gradientStyle}
                     className="bg-clip-text text-transparent animate-gleam"
                 >
                     {children}
-                </span>
-            </span>
-        </span>
+                </div>
+            </div>
+        </div>
     );
 };
 
