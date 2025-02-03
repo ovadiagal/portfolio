@@ -7,10 +7,12 @@ export default function NotFound() {
                 Well this is awkward...
             </h1>
             <p>
-                <span>The page you're looking for could not be found.</span>
+                <span>
+                    The page you&apos;re looking for could not be found.
+                </span>
             </p>
             <p className="mb-4">
-                <span>Here's a cat GIF to cheer you up instead!</span>
+                <span>Here&apos;s a cat GIF to cheer you up instead!</span>
             </p>
 
             <div
