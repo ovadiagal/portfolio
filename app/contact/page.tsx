@@ -7,19 +7,19 @@ export default function Page() {
             <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
                 <span>Contact Me</span>
             </h1>
-            <p className="mb-2">
-                <span>Shoot me an email!</span>
+            <p className="mb-1">
+                <span>Shoot me an email:</span>
             </p>
-            <p className="mb-6 text-center">
+            <p className="mb-6">
                 <span>gal dot ovadia at gatech dot edu</span>
             </p>
-            <p className="mb-2">
+            <p className="mb-1">
                 <span>Or find me at these places:</span>
             </p>
-            <ul className="font-sm flex flex-row space-x-4 gap-8 text-neutral-600 justify-center text-neutral-300">
+            <ul className="font-sm flex flex-row space-x-4 gap-8 justify-center">
                 <li>
                     <Link
-                        className="flex items-center transition-all hover:text-neutral-800 hover:text-neutral-200 hover:underline clickable ml-2 h-7"
+                        className="flex items-center transition-all hover:underline clickable ml-2 h-7"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.linkedin.com/in/galovadia/"
@@ -32,7 +32,7 @@ export default function Page() {
                 </li>
                 <li>
                     <Link
-                        className="flex items-center transition-all hover:text-neutral-800 hover:text-neutral-200  hover:underline clickable"
+                        className="flex items-center transition-all hover:underline clickable"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://github.com/ovadiagal"

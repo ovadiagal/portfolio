@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 3.9%;
+    --background-color: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -29,8 +30,15 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --radius: 0.5rem;
+    --ds-teal-500: #2dd4bf;  /* tailwind teal-400 or teal-500, etc. */
+    --ds-blue-700: #1d4ed8;
+    --ds-purple-700: #6d28d9;
+    --ds-pink-700: #be185d;
+    --ds-amber-700: #b45309;
+    --ds-background-200: #eeeeee;
   }
 }
+
 
 @layer base {
   * {

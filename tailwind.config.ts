@@ -16,18 +16,33 @@ export default {
     theme: {
         extend: {
             keyframes: {
+                // Add the "northern-lights" keyframe
                 gleam: {
                     "0%": { backgroundPosition: "100% 0", opacity: "0.5" },
                     "45%": { backgroundPosition: "0% 0", opacity: "0.5" },
                     "100%": { backgroundPosition: "0% 0", opacity: "0.5" },
                 },
+                "northern-lights": {
+                    "0%": {
+                        transform: "translateX(0)",
+                    },
+                    "100%": {
+                        // The distance you translate is up to you.
+                        // 66.6667% is common if you want 3 repeated sets (because 100% / 1.5 = ~66.6667).
+                        transform: "translateX(-66.6667%)",
+                    },
+                },
             },
             animation: {
+                // We use a CSS variable (--duration) for the timing so we can control it inline.
                 gleam: "gleam 7s linear infinite",
+                "northern-lights":
+                    "northern-lights var(--duration) linear infinite",
             },
             colors: {
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
+                "background-color": "hsl(var(--background))",
                 card: {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
