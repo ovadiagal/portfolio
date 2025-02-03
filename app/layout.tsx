@@ -25,7 +25,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className="dark custom-cursor">
+        <html lang="en" className="custom-cursor">
             <Head>
                 <title>Gal Ovadia&apos;s Portfolio</title>
                 <meta property="og:title" content="Gal Ovadia's Portfolio" />

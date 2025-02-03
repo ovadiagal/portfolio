@@ -16,10 +16,10 @@ export default function Page() {
             <p className="mb-2">
                 <span>Or find me at these places:</span>
             </p>
-            <ul className="font-sm flex flex-row space-x-4 gap-8 text-neutral-600 justify-center dark:text-neutral-300">
+            <ul className="font-sm flex flex-row space-x-4 gap-8 text-neutral-600 justify-center text-neutral-300">
                 <li>
                     <Link
-                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200 hover:underline clickable ml-2 h-7"
+                        className="flex items-center transition-all hover:text-neutral-800 hover:text-neutral-200 hover:underline clickable ml-2 h-7"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://www.linkedin.com/in/galovadia/"
@@ -32,7 +32,7 @@ export default function Page() {
                 </li>
                 <li>
                     <Link
-                        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-200  hover:underline clickable"
+                        className="flex items-center transition-all hover:text-neutral-800 hover:text-neutral-200  hover:underline clickable"
                         rel="noopener noreferrer"
                         target="_blank"
                         href="https://github.com/ovadiagal"
