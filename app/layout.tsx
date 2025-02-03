@@ -5,6 +5,7 @@ import { JetBrains_Mono } from "next/font/google";
 import Head from "next/head";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import Footer from "@/components/ui/footer";
 
 const jetbrainsMono = JetBrains_Mono({
     subsets: ["latin"],
@@ -48,6 +49,7 @@ export default function RootLayout({
                     {children}
                     <SpeedInsights />
                     <Analytics />
+                    <Footer />
                 </main>
             </body>
         </html>
