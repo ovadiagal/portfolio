@@ -19,7 +19,7 @@ export default function Page() {
     return (
         <section>
             <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-                Technical Skills
+                <span>Technical Skills</span>
             </h1>
             <GleamingText>
                 <ul className="flex flex-wrap justify-around">
@@ -28,7 +28,7 @@ export default function Page() {
                             key={skill}
                             className="flex items-start space-x-2 mb-4 w-[30%]" // Adjust width to fit 3 per row
                         >
-                            <p>{skill}</p>
+                            <span>{skill}</span>
                         </li>
                     ))}
                 </ul>

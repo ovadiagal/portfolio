@@ -78,15 +78,9 @@ button {
     pointer;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 span {
   cursor:
     url("/cursor-text.svg") 10 10,
     text;
 }
+
