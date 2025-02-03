@@ -8,6 +8,7 @@ const navItems = {
     "/experience": { name: "Experience" },
     "/skills": { name: "Skills" },
     "/contact": { name: "Contact" },
+    "/rainbow": { name: "Rainbow" },
 };
 
 export function Navbar() {

@@ -22,9 +22,15 @@ export default {
                     "45%": { backgroundPosition: "0% 0", opacity: "0.5" },
                     "100%": { backgroundPosition: "0% 0", opacity: "0.5" },
                 },
+                "northern-lights": {
+                    "0%, 100%": { transform: "translate3d(0, 0, 0)" },
+                    "50%": { transform: "translate3d(20px, 20px, 0)" },
+                },
             },
             animation: {
                 gleam: "gleam 7s linear infinite",
+                "northern-lights":
+                    "northern-lights var(--duration, 23s) infinite",
             },
             colors: {
                 background: "hsl(var(--background))",
