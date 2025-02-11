@@ -1,7 +1,20 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	/* config options here */
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Permissions-Policy",
+            value:
+              "private-state-token-redemption=(), private-state-token-issuance=(), browsing-topics=()",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
