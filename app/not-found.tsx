@@ -20,7 +20,7 @@ export default function NotFound() {
                 style={{ paddingBottom: "50%" }}
             >
                 <Image
-                    src={`/cats/cat${Math.floor(Math.random() * 7) + 1}.gif`}
+                    src={`/cats/cat${Math.floor(Math.random() * 7) + 1}.gif?cb=${Date.now()}`}
                     layout="fill"
                     objectFit="contain"
                     alt="404 Not Found"
