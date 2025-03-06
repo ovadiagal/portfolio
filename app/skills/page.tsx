@@ -1,19 +1,8 @@
-import GleamingText from "@/components/gleamingText";
+"use client";
 
-const skills = [
-  "TypeScript",
-  "Python",
-  "Java",
-  "React",
-  "GraphQL",
-  "PostgreSQL",
-  "C/C++",
-  "PHP",
-  "P4",
-  "Docker",
-  "Linux",
-  "Distributed Systems",
-];
+import CircularText from "@/components/circularText";
+import GleamingText from "@/components/gleamingText";
+import RotatingText from "@/components/rotatingText";
 
 export default function Page() {
   return (
@@ -21,18 +10,33 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         <span>Technical Skills</span>
       </h1>
-      <GleamingText>
-        <ul className="flex flex-wrap justify-around">
-          {skills.map((skill) => (
-            <li
-              key={skill}
-              className="flex items-start space-x-2 mb-4 w-[30%]" // Adjust width to fit 3 per row
-            >
-              <span>{skill}</span>
-            </li>
-          ))}
-        </ul>
-      </GleamingText>
+      <div className="relative w-[400px] h-[400px]">
+        <CircularText
+          text={createBulletText([
+            "TypeScript",
+            "Python",
+            "Java",
+            "C",
+            "C++",
+            "PHP",
+            "P4",
+          ])}
+          spinDuration={40}
+          className="absolute inset-0 w-full h-full"
+        />
+        <CircularText
+          text={createBulletText(["React", "GraphQL", "Docker"])}
+          spinDuration={30}
+          className="absolute inset-0 w-[300px] h-[300px] m-auto"
+        />
+        <CircularText
+          text={createBulletText(["SQL", "Linux", "AWS"])}
+          spinDuration={20}
+          className="absolute inset-0 w-[200px] h-[200px] m-auto"
+        />
+      </div>
     </section>
   );
 }
+
+const createBulletText = (list: string[]): string => list.join(" | ") + " | ";
