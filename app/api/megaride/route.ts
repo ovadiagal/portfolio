@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { neon } from '@neondatabase/serverless';
 
 
-export async function GET(request: Request) {
+export async function GET() {
     const sql = neon(`${process.env.DATABASE_URL}`);
     const rows = await sql(
         `SELECT id, processed, controller, repeater_internal, repeater_edge FROM requests WHERE processed=false ORDER BY created_at ASC LIMIT 1`);
