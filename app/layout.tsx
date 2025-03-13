@@ -43,7 +43,7 @@ export default function RootLayout({
         <main
           className={cx(
             "w-full flex-auto min-w-0 mt-6 flex flex-col px-2",
-            jetbrainsMono.className
+            jetbrainsMono.className,
           )}
         >
           <Navbar />

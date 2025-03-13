@@ -37,6 +37,16 @@
     --ds-amber-700: #b45309;
     --ds-background-200: #eeeeee;
   }
+  ::selection {
+    background: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 3.9%);
+  }
+
+  /* For Firefox */
+  ::-moz-selection {
+    background: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 3.9%);
+  }
 }
 
 @layer base {
